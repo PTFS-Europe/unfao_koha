@@ -257,6 +257,8 @@ function CloneField(index, hideMarc, advancedMARCEditor) {
                             anchors[j].setAttribute('onclick',"UnCloneField('" + new_id + "'); return false;");
                         } else if (anchors[j].getAttribute('class') == 'expandfield') {
                             anchors[j].setAttribute('onclick',"ExpandField('" + new_id + "'); return false;");
+                        } else if (anchors[j].getAttribute('class') == 'buttonPlus') {
+			    anchors[j].setAttribute('onclick',"openAgrovoc('" + new_id + "')");
                         }
                     }
                 }
@@ -550,6 +552,10 @@ function CheckMandatorySubfields(p){
         }
     });
     return total;
+}
+
+function openAgrovoc(tagsubfield) {
+	newin=window.open("../agrovoc/agrovoc.pl?lang_english='EN'&index="+tagsubfield,'width=700,height=550,toolbar=false,scrollbars=yes');
 }
 
  $(document).ready(function() {
