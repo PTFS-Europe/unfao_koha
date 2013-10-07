@@ -5,7 +5,7 @@ package C4::AgrovocWSService;
 # -- generated from http://aims.fao.org/webservices/axis/services/SKOSWS?wsdl
 my %methods = (
 'getConceptObject' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -14,7 +14,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptObject
 'getConceptInfoByURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -24,7 +24,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptInfoByURI
 'suggestTerm' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -36,7 +36,7 @@ my %methods = (
     ], # end parameters
   }, # end suggestTerm
 'getListofURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -46,7 +46,7 @@ my %methods = (
     ], # end parameters
   }, # end getListofURI
 'reloadOWLModel' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -54,7 +54,7 @@ my %methods = (
     ], # end parameters
   }, # end reloadOWLModel
 'complexSearchByTermXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -64,7 +64,7 @@ my %methods = (
     ], # end parameters
   }, # end complexSearchByTermXML
 'getTermCodeByTerm' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -72,7 +72,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermCodeByTerm
 'getTermsByClassName' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -84,7 +84,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermsByClassName
 'getConceptInfoByTermcodeXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -93,7 +93,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptInfoByTermcodeXML
 'getURIByTermAndLangXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -105,7 +105,7 @@ my %methods = (
     ], # end parameters
   }, # end getURIByTermAndLangXML
 'getDefinitions' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -114,7 +114,7 @@ my %methods = (
     ], # end parameters
   }, # end getDefinitions
 'getTermsByCodesAndLanguage' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -126,7 +126,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermsByCodesAndLanguage
 'simpleSearchByMode2' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -136,7 +136,7 @@ my %methods = (
     ], # end parameters
   }, # end simpleSearchByMode2
 'getTermCodeByTermXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -145,7 +145,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermCodeByTermXML
 'getTermsByURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -158,7 +158,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermsByURI
 'getLanguageCode' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -166,7 +166,7 @@ my %methods = (
     ], # end parameters
   }, # end getLanguageCode
 'getConceptRelationshipList' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -175,7 +175,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptRelationshipList
 'getDefinitionsByClassName' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -186,7 +186,7 @@ my %methods = (
     ], # end parameters
   }, # end getDefinitionsByClassName
 'getDefinitionsByURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -197,14 +197,14 @@ my %methods = (
     ], # end parameters
   }, # end getDefinitionsByURI
 'getAgrovocCSLanguages' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
     ], # end parameters
   }, # end getAgrovocCSLanguages
 'getConceptInfoByTermcode' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -212,7 +212,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptInfoByTermcode
 'getStatusConcept' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -222,7 +222,7 @@ my %methods = (
     ], # end parameters
   }, # end getStatusConcept
 'getFullAuthority' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -234,7 +234,7 @@ my %methods = (
     ], # end parameters
   }, # end getFullAuthority
 'getAuthoritySegment' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -245,7 +245,7 @@ my %methods = (
     ], # end parameters
   }, # end getAuthoritySegment
 'getConceptByKeyword' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -257,7 +257,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptByKeyword
 'getDataTypeRelationship' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -265,7 +265,7 @@ my %methods = (
     ], # end parameters
   }, # end getDataTypeRelationship
 'getAllLabelsByTermcode2' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -274,7 +274,7 @@ my %methods = (
     ], # end parameters
   }, # end getAllLabelsByTermcode2
 'getTermByLanguage' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -283,7 +283,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermByLanguage
 'getTermCodeByTermAndLangXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -295,7 +295,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermCodeByTermAndLangXML
 'getConceptByRelationshipValue' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -308,14 +308,14 @@ my %methods = (
     ], # end parameters
   }, # end getConceptByRelationshipValue
 'getAgrovocCSModules' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
     ], # end parameters
   }, # end getAgrovocCSModules
 'getConceptInfoByClassName' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -325,7 +325,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptInfoByClassName
 'getStatusTerm' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -336,7 +336,7 @@ my %methods = (
     ], # end parameters
   }, # end getStatusTerm
 'getRejectedConcepts' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -349,7 +349,7 @@ my %methods = (
     ], # end parameters
   }, # end getRejectedConcepts
 'simpleSearchByModeLangXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -362,7 +362,7 @@ my %methods = (
     ], # end parameters
   }, # end simpleSearchByModeLangXML
 'getConceptByURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -372,7 +372,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptByURI
 'getRelatedValuesFromConceptURIRelationURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -382,7 +382,7 @@ my %methods = (
     ], # end parameters
   }, # end getRelatedValuesFromConceptURIRelationURI
 'searchByModeLangScopeXML' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -396,14 +396,14 @@ my %methods = (
     ], # end parameters
   }, # end searchByModeLangScopeXML
 'getAgrovocCSLanguagesExpand' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
     ], # end parameters
   }, # end getAgrovocCSLanguagesExpand
 'getAvailableCode' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -411,7 +411,7 @@ my %methods = (
     ], # end parameters
   }, # end getAvailableCode
 'getStatusList' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -419,7 +419,7 @@ my %methods = (
     ], # end parameters
   }, # end getStatusList
 'getObjectPropertyRelationship' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -427,7 +427,7 @@ my %methods = (
     ], # end parameters
   }, # end getObjectPropertyRelationship
 'getPossibleRelationsFromConceptURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -437,7 +437,7 @@ my %methods = (
     ], # end parameters
   }, # end getPossibleRelationsFromConceptURI
 'getTermExpansion' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -449,7 +449,7 @@ my %methods = (
     ], # end parameters
   }, # end getTermExpansion
 'getCodesByURI' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -459,7 +459,7 @@ my %methods = (
     ], # end parameters
   }, # end getCodesByURI
 'getConceptByKeyword2' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -472,7 +472,7 @@ my %methods = (
     ], # end parameters
   }, # end getConceptByKeyword2
 'getLatestUpdates' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
@@ -483,7 +483,7 @@ my %methods = (
     ], # end parameters
   }, # end getLatestUpdates
 'getAllTermInSubClass' => {
-    endpoint => 'http://193.43.36.125:8090/axis/services/SKOSWS',
+    endpoint => 'http://aims.fao.org/webservices/axis/services/SKOSWS',
     soapaction => '',
     namespace => 'http://aos.aims.fao.org',
     parameters => [
