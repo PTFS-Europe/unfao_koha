@@ -23,13 +23,14 @@ use warnings;
 
 use CGI;
 use JSON;
+use Encode;
 
 use C4::AgrovocWSService
   qw( getConceptInfoByTermcode getTermByLanguage getDefinitions);
 
 my $q    = CGI->new;
 my $lang = $q->param('lang');
-$lang ||= 'EN';
+$lang ||= 'en';
 
 my $concept = retrieve_concept( $q->param('termcode'), $lang );
 my $label = join ' -- ', @{ $concept->{labels} };
@@ -82,7 +83,7 @@ sub retrieve_concept {
     $concept_hash->{termcode} =~ s/\D//g;    # remove surrounding [ ]
     my $other_avail_lang = {};
 
-    my $labels  = shift @concept_array;
+    my $labels  = encode( 'UTF-8', shift @concept_array);
     my $arr_ref = [];
     if ( $labels =~ m/\[(.*)\]/ ) {
         $labels = $1;
@@ -144,7 +145,8 @@ sub retrieve_concept {
 }
 
 sub _string2array {
-    my $string = shift;
+    my $s = shift;
+    my $string = encode('UTF-8', $s);
     $string =~ s/^\[//;
     $string =~ s/\]$//;
     return split /,\s*/, $string;

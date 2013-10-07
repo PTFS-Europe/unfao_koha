@@ -23,6 +23,7 @@ use warnings;
 
 use CGI;
 use JSON;
+use Encode;
 
 #use Data::Dumper;
 use C4::AgrovocWSService qw( simpleSearchByMode2 );
@@ -59,7 +60,8 @@ sub call_simple_search {
         $langs{$_} = 1;
     }
 
-    my $rs = simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
+    my $rs1 = simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
+    my $rs = encode( 'UTF-8', $rs1);
     my $array_ref = [];
 
     #    my $rs = encode( 'utf8', $som->result );
@@ -70,7 +72,7 @@ sub call_simple_search {
         while (@elements) {
             my $termcode     = shift @elements;
             my $matched_term = shift @elements;
-            my $language     = shift @elements;
+            my $language     = uc shift @elements;
             if ( $termcode eq 'NumberOfResults' ) {
                 last;
             }
