@@ -615,6 +615,10 @@ function Changefwk() {
                     <a href="#" tabindex="1" class="buttonMinus" onclick="UnCloneField('tag_[% innerloo.tag %]_[% innerloo.index %][% innerloo.random %]'); return false;" title="Delete this Tag">
                         <img src="[% interface %]/[% theme %]/img/delete-tag.png" alt="Delete this Tag" />
                     </a>
+                [% IF innerloo.agrovoc %]
+                Agrovoc:
+                <a href="#" tabindex="1" class="buttonDot" onclick="openAgrovoc('tag_[% innerloo.tag %]_[% innerloo.index %][% innerloo.random %]'); return false;" title="Agrovoc Search">&#8722;</a>
+                [% END %]
                 </span>
 
         </div>
