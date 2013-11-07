@@ -200,11 +200,15 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
                 </div>
                 <div id="secondaryTerms">
                 </div>
+                [% IF tool %]
+                <a class="cancel close" href="/cgi-bin/koha/tools/tools-home.pl">Quit</a>
+                [% ELSE %]
                 [% IF tagindex %]
                 <input type="hidden" name="tagindex" id="tagindex" value="[% tagindex %]" />
     <a href="javascript:termToTag('[% tagindex %]');">Move To Rec</a>
                 [% END %]
     <a class="cancel close" href="#">Cancel</a>
+                [% END %]
                 </form>
          </div><!-- termPane -->
 

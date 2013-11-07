@@ -43,6 +43,10 @@ my ( $template, $loggedinuser, $cookie ) = get_template_and_user(
 
 my $op        = $q->param('op');
 my $tag_index = $q->param('index');
+if ( my $tool = $q->param('tool') ) {
+    $template->param( tool => $tool );
+}
+
 
 if ($op) {
     if ( $op eq 'do_simple_search' ) {
