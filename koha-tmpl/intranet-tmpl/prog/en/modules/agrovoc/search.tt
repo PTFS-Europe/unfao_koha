@@ -207,6 +207,7 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
                 <input type="hidden" name="tagindex" id="tagindex" value="[% tagindex %]" />
     <a href="javascript:termToTag('[% tagindex %]');">Move To Rec</a>
                 [% END %]
+    <a href="javascript:clearSelectedTerms();">Clear Selected Terms</a>
     <a class="cancel close" href="#">Cancel</a>
                 [% END %]
                 </form>

@@ -467,3 +467,10 @@ function cloneField(index) {
     original.parentNode.insertBefore(clone,original.nextSibling);
     return new_id;
 }
+
+function clearSelectedTerms() {
+    var savedTerms = document.getElementById('savedTerms');
+    savedTerms.innerHTML = '';
+    // while (savedTerms.firstChild) {
+    //     savedTerms.removeChild(savedTerms.firstChild)
+}
