@@ -24,6 +24,7 @@ use warnings;
 use CGI;
 use JSON;
 use Encode;
+use Carp;
 
 use C4::AgrovocWSService
   qw( getConceptInfoByTermcode getTermByLanguage getDefinitions);
@@ -121,13 +122,16 @@ sub retrieve_concept {
         $concept_hash->{$array_label} = \@arr;
     }
 
-    #for my $arr_label (qw( UF USE BT NT RT )) {
-    for my $arr_label (qw( UF USE BT NT )) {
+    for my $arr_label (qw( UF USE BT NT RT )) {
         my $tmp_arr = [];   # cannot do this in place as we need to remove terms
                             # which lack a label in the interface language
         foreach ( @{ $concept_hash->{$arr_label} } ) {
             my $tc = $_;
-            my $term_label = getTermByLanguage( $tc, $language );
+            my $term_label;
+            eval { $term_label = getTermByLanguage( $tc, $language ); };
+            if ($@) {
+                carp "getTerm:$tc:$@";
+            }
             if ($term_label) {
                 push @{$tmp_arr},
                   {
