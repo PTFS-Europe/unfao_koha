@@ -119,7 +119,8 @@ sub retrieve_concept {
         $concept_hash->{$array_label} = \@arr;
     }
 
-    for my $arr_label (qw( UF USE BT NT RT )) {
+    #for my $arr_label (qw( UF USE BT NT RT )) {
+    for my $arr_label (qw( UF USE BT NT )) {
         my $tmp_arr = [];   # cannot do this in place as we need to remove terms
                             # which lack a label in the interface language
         foreach ( @{ $concept_hash->{$arr_label} } ) {
