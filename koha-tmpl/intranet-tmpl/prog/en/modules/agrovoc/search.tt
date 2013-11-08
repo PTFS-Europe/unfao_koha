@@ -48,9 +48,7 @@
    <div id="pageContent">
         <h1>Agrovoc Term Search</h1>
         <div data-module="Search" data-module-id="searchPane">
-            <!--<form id="agrovocSearch" method="get" action="search.pl">-->
-            <form id="agrovocSearch">
-<!--                <input type="hidden" name="op" value="do_simple_search" />-->
+            <form id="agrovocSearch" onSubmit="searchTerm(); return false;" >
                 <label for="searchmode">Search</label><br/>
                 <select name="searchmode" id="searchmode">
                     <option value="starting">starting with</option>
