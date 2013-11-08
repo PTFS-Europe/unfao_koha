@@ -1,12 +1,12 @@
 #!/usr/bin/perl
 
-# Copyright (C) 2010,2011  PTFS-Europe Ltd.
+# Copyright (C) 2010,2011,2013  PTFS-Europe Ltd.
 
 # This file is part of Koha.
 
 # Koha is program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
+# as published by the Free Software Foundation; either version 3
 # of the License, or (at your option) any later version.
 #
 # Koha is distributed in the hope that it will be useful,
