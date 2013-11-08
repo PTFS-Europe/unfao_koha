@@ -32,7 +32,8 @@ use C4::AgrovocWSService qw( simpleSearchByMode2 );
 my $q = CGI->new;
 
 my ( $template, $loggedinuser, $cookie ) = get_template_and_user(
-    {   template_name   => 'agrovoc/search.tmpl',
+    {
+        template_name   => 'agrovoc/search.tmpl',
         query           => $q,
         type            => 'intranet',
         authnotrequired => 1,
@@ -46,7 +47,6 @@ my $tag_index = $q->param('index');
 if ( my $tool = $q->param('tool') ) {
     $template->param( tool => $tool );
 }
-
 
 if ($op) {
     if ( $op eq 'do_simple_search' ) {
@@ -62,7 +62,8 @@ if ($op) {
         );
     }
 
-} else {
+}
+else {
     get_set_languages($q);
 }
 if ($tag_index) {
@@ -77,8 +78,9 @@ sub call_simple_search {
         $langs{$_} = 1;
     }
 
-    my $rs1 = simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
-    my $rs = encode( 'UTF-8', $rs1);
+    my $rs1 =
+      simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
+    my $rs = encode( 'UTF-8', $rs1 );
     my $array_ref = [];
 
     #    my $rs = encode( 'utf8', $som->result );
@@ -97,7 +99,8 @@ sub call_simple_search {
                 next;
             }
             push @{$array_ref},
-              { termcode    => $termcode,
+              {
+                termcode    => $termcode,
                 matchedTerm => $matched_term,
                 language    => $language,
               };

@@ -60,8 +60,9 @@ sub call_simple_search {
         $langs{$_} = 1;
     }
 
-    my $rs1 = simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
-    my $rs = encode( 'UTF-8', $rs1);
+    my $rs1 =
+      simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
+    my $rs = encode( 'UTF-8', $rs1 );
     my $array_ref = [];
 
     #    my $rs = encode( 'utf8', $som->result );
@@ -80,7 +81,8 @@ sub call_simple_search {
                 next;
             }
             push @{$array_ref},
-              { termcode    => $termcode,
+              {
+                termcode    => $termcode,
                 matchedTerm => $matched_term,
                 language    => $language,
               };
