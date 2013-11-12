@@ -125,12 +125,12 @@ sub retrieve_concept {
     for my $arr_label (qw( UF USE BT NT RT )) {
         my $tmp_arr = [];   # cannot do this in place as we need to remove terms
                             # which lack a label in the interface language
-        foreach ( @{ $concept_hash->{$arr_label} } ) {
-            my $tc = $_;
+        foreach my $tc ( @{ $concept_hash->{$arr_label} } ) {
             my $term_label;
             eval { $term_label = getTermByLanguage( $tc, $language ); };
             if ($@) {
                 carp "getTerm:$tc:$@";
+                next;
             }
             if ($term_label) {
                 push @{$tmp_arr},
