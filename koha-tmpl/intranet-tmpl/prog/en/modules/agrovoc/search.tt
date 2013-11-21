@@ -41,6 +41,18 @@
    #term_details { float: right; width: 23.3333em; }
 
 </style>
+ <style>
+#savedTerms { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#savedTerms li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 9pt; height: 18px; }
+#savedTerms li span { position: absolute; margin-left: -1.3em; }
+</style>
+ <script>
+$(function() {
+$( "#savedTerms" ).sortable();
+$( "#savedTerms" ).disableSelection();
+});
+</script>
+
 </head>
 <body>
 <div id="breadcrumbs"><a href="/cgi-bin/koha/mainpage.pl">Home</a></div>
@@ -191,8 +203,8 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
         </div>
          <div data-module="Select" data-module-id="selectPane">
             <h2>Selected</h2>
-                <div id="savedTerms">
-                </div>
+                <ul id="savedTerms">
+                </ul>
                 <form>
                 <div id="primaryTerms">
                 </div>

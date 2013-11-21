@@ -82,11 +82,11 @@ function addTermSaveButton(termcode, labels, language) {
 
 function saveTerm(termcode, labels, termlang) {
     /* Write the term in the save box */
-    var div = document.getElementById('savedTerms');
-    var newPara = document.createElement("p");
+    var list = document.getElementById('savedTerms');
+    var newLi = document.createElement("li");
     var txt = document.createTextNode(unescape(labels) + ': ' + termcode + ': (' + termlang + ')');
-    newPara.appendChild(txt);
-    div.appendChild(newPara);
+    newLi.appendChild(txt);
+    list.appendChild(newLi);
 }
 
 function saveTermLeft(termcode, labels, termlang) {
@@ -106,7 +106,7 @@ function saveCorrectTerm(resp) {
         saveConcept.label = resp.labels;
     }
     var div = document.getElementById('savedTerms');
-    var newPara = document.createElement("p");
+    var newPara = document.createElement("li");
     var txt = document.createTextNode(saveConcept.label + ': ' + saveConcept.termcode + ': (' + saveConcept.termlang + ')');
         newPara.appendChild(txt);
         div.appendChild(newPara);
@@ -221,7 +221,7 @@ function selectCheckboxLeft(termcode, label, language)
 function termToTag(tagindex)
 {
     var savedTerms = document.getElementById('savedTerms');
-    var paras = savedTerms.getElementsByTagName('p');
+    var paras = savedTerms.getElementsByTagName('li');
     var terms = new Array();
     for( var i = 0; i < paras.length; i++) {
         var t = paras[i].firstChild.nodeValue;
