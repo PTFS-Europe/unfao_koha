@@ -51,6 +51,10 @@ $(function() {
 $( "#savedTerms" ).sortable();
 $( "#savedTerms" ).disableSelection();
 });
+
+$( "#savedTerms .delete").click(function() {
+  $(this).parent().remove();
+});
 </script>
 
 </head>
@@ -203,18 +207,15 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
                 <ul id="savedTerms">
                 </ul>
                 <form>
-                <div id="primaryTerms">
-                </div>
-                <div id="secondaryTerms">
-                </div>
                 [% IF tool %]
-                <a class="cancel close" href="/cgi-bin/koha/tools/tools-home.pl">Quit</a>
+                <a class="cancel close" href="/cgi-bin/koha/tools/tools-home.pl">Return</a>
+                <a href="javascript:clearSelectedTerms();">Clear Terms</a>
                 [% ELSE %]
                 [% IF tagindex %]
                 <input type="hidden" name="tagindex" id="tagindex" value="[% tagindex %]" />
     <a href="javascript:termToTag('[% tagindex %]');">Move To Rec</a>
                 [% END %]
-    <a href="javascript:clearSelectedTerms();">Clear Selected Terms</a>
+    <a href="javascript:clearSelectedTerms();">Clear Terms</a>
     <a class="cancel close" href="#">Cancel</a>
                 [% END %]
                 </form>
