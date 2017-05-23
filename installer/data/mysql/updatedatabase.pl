@@ -7269,10 +7269,6 @@ if ( CheckVersion($DBversion) ) {
         DELETE FROM patronimage WHERE NOT EXISTS (SELECT * FROM borrowers WHERE borrowers.cardnumber = patronimage.cardnumber)
     });
 
-    $dbh->do(qq{
-        ALTER TABLE patronimage ADD borrowernumber INT( 11 ) NULL FIRST
-    });
-
     $dbh->{AutoCommit} = 0;
     $dbh->{RaiseError} = 1;
 
@@ -7288,12 +7284,6 @@ if ( CheckVersion($DBversion) ) {
         eval { $dbh->rollback };
     }
     else {
-        $dbh->do(qq{
-            ALTER TABLE patronimage DROP FOREIGN KEY patronimage_fk1
-        });
-        $dbh->do(qq{
-            ALTER TABLE patronimage DROP PRIMARY KEY, ADD PRIMARY KEY( borrowernumber )
-        });
         $dbh->do(qq{
             ALTER TABLE patronimage DROP cardnumber
         });
