@@ -23,7 +23,6 @@ use warnings;
 
 use CGI;
 use JSON;
-use Encode;
 use Carp;
 
 use C4::AgrovocWSService
@@ -50,14 +49,14 @@ my $label = join ' -- ', @{ $concept->{labels} };
 #    termlang             => $lang,
 #);
 
-print $q->header('application/json');
+print $q->header( -type => 'application/json', -charset => 'utf-8' );
 my $json = {
     labels   => $label,
     termlang => $lang,
     concept  => $concept,
 };
 
-my $json_text = to_json( $json, { utf8 => 1 } );
+my $json_text = encode_json $json;
 
 print $json_text;
 
@@ -77,15 +76,12 @@ sub retrieve_concept {
     );
     my @concept_array = getConceptInfoByTermcode($termcode);
 
-    #foreach (@concept_array) {
-    #    warn("CA:$_");
-    #}
     my $concept_hash = {};
     $concept_hash->{termcode} = shift @concept_array;
     $concept_hash->{termcode} =~ s/\D//g;    # remove surrounding [ ]
     my $other_avail_lang = {};
 
-    my $labels = encode( 'UTF-8', shift @concept_array );
+    my $labels  = shift @concept_array;
     my $arr_ref = [];
     if ( $labels =~ m/\[(.*)\]/ ) {
         $labels = $1;
@@ -153,8 +149,7 @@ sub retrieve_concept {
 }
 
 sub _string2array {
-    my $s = shift;
-    my $string = encode( 'UTF-8', $s );
+    my $string = shift;
     $string =~ s/^\[//;
     $string =~ s/\]$//;
     return split /,\s*/, $string;

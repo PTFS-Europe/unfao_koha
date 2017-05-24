@@ -23,9 +23,7 @@ use warnings;
 
 use CGI;
 use JSON;
-use Encode;
 
-#use Data::Dumper;
 use C4::AgrovocWSService qw( simpleSearchByMode2 );
 
 my $q = CGI->new;
@@ -44,10 +42,9 @@ if ($op) {
         # $search_params->{languages}    = get_set_languages($q);
         my $arr_ref = call_simple_search($search_params);
 
-        my $json_text = to_json( $arr_ref, { utf8 => 1 } );
+        my $json_text = encode_json $arr_ref;
 
-        #warn($json_text);
-        print $q->header('application/json');
+        print $q->header( -type => 'application/json', -charset => 'utf-8' );
         print $json_text;
     }
 
@@ -60,12 +57,10 @@ sub call_simple_search {
         $langs{$_} = 1;
     }
 
-    my $rs1 =
+    my $rs =
       simpleSearchByMode2( $sp->{searchstring}, $sp->{searchmode}, q{} );
-    my $rs = encode( 'UTF-8', $rs1 );
     my $array_ref = [];
 
-    #    my $rs = encode( 'utf8', $som->result );
     if ( $rs =~ m/^\[(.*)\]/ ) {
         $rs = $1;
         my @elements = split /\|\|/, $rs;
