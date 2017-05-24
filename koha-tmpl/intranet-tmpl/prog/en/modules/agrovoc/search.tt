@@ -95,8 +95,7 @@ $( "#savedTerms" ).disableSelection();
             </form>
          </div><!-- searchPane -->
 <!---  TERM PANE -->
-         <div data-module="Term" data-module-id="termPane" id="TermPane">
-            <h2>Term Entry</h2>
+            <div data-module="Related terms" data-module-id="termPane" id="TermPane">
             <div id="termcodeLabel">
             <p>
             [% IF termcode %]
@@ -189,7 +188,6 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
 
 </div><!-- termPane -->
          <div data-module="SearchResults" data-module-id="searchResultsPane">
-            <h2>Search Results</h2> <!-- var ss_results_mode set -->
             <div id="resultsList">
             <ul>
             [% FOR term IN term_array %]
@@ -201,8 +199,7 @@ See in <button type="button" class="termlink" onclick="lookupTerm([% ALTLANG_val
             </ul>
             </div>
         </div>
-         <div data-module="Select" data-module-id="selectPane">
-            <h2>Selected</h2>
+           <div data-module="Selected" data-module-id="selectPane">
                 <ul id="savedTerms">
                 </ul>
                 <form>
